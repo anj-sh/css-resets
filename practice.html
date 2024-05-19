@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS властивості</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sticky-div {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 40px;
+            background-color: greenyellow;
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+
+        .element1 {
+            box-sizing: border-box;
+            width: 100px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+
+        .element2 {
+            box-sizing: content-box;
+            width: 100px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p style="display: inline;">Перетворення блокового елемента p у інлайновий, завдяки властивості display</p>
+        <span style="display: block;">Перетворення інлайнового елемента span у блоковий, завдяки властивості display</span>
+        <p style="display: flex; justify-content: center;">Застосування flex</p>
+        <div class="element1">Використання box-sizing: border-box, Загальна ширина елемента буде 100px</div>
+        <div class="element2">Використання box-sizing: content-box, Загальна ширина елемента буде 130px</div>
+    </div>
+    <br>
+    <div style="float: right;">Елемент 1</div>
+    <div style="float: right;">Елемент 2</div>
+    <div style="float: right;">Елемент 3</div>
+    <div style="float: right;">Елемент 4</div>
+
+    <div style="clear: both;"></div>
+    <div>Цей елемент не буде обтікати попередні 4.</div>
+    <br>
+    <div style="width: 200px; height: 150px; overflow: auto;">
+    <p>
+      Цей текст є досить довгим, щоб не вміщуватися у контейнер розміром 200x150 пікселів.
+      Завдяки overflow: auto, з'являться смуги прокрутки, щоб можна було прокручувати і бачити весь вміст.
+    </p>
+    </div>
+    <br>
+    <div>Я статично позиціонований блок і слідую звичайному потоку документа.</div>
+    <div style="position: relative; left: 40px; top: 20px;">Я зміщений на 40px праворуч і 20px вгору від моєї звичайної позиції.</div>
+    <div style="position: relative; height: 700px;">
+        <div style="position: absolute; bottom: 0; right: 0;">Я абсолютно позиціонований внизу праворуч мого батьківського блоку.</div>
+    </div>
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%;">Я фіксований внизу вікна переглядача.</div>
+    <div class="sticky-div">Sticky Div (Прилипає при прокрутці)</div>
+</body>
+</html> 
